@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #7ED957;
+}
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+#switch{visibility: hidden;}
+label {
+    cursor: pointer;
+    text-indent: -2000px;
+    width: 400px;
+    height: 200px;
+    background: grey;
+    border-radius: 200px;
+    position: relative;
+}
+input {
+    appearance: none;
+}
+label::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 90px;
+    transition: 0.4s;
+}
+input:checked + label {
+    background: #7ED957;
+}
+input:checked + label:after {
+    left: calc(-100% - 5px);
+    transform: translateX(-100%);
+}
